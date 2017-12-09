@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<title>Cindy Song</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="avatarProfile.jpg">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('skydiving1copy.jpg');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("cindy1.jpg");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("pittsburgh.jpg");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">CINDY</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">CINDY <span class="w3-hide-small">SONG</span></span>
+  </div>
+</div>
+
+
+
+
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h1 class="w3-center">ABOUT ME</h1>
+  <div class="w3-row">
+      <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large ">
+		<h3><strong>Hi, my name is Cindy!</strong><h3><br>
+		<div>
+		<h4><i class="fa fa-birthday-cake"></i>		06/22/1996</h4>
+		</div><br>
+		<div>
+		<h4><i class="fa fa-map-marker"></i>	Born in China, Guangxi Province</h4>
+		</div><br>
+		<div>
+		<h4><i class="fa fa-plane"></i>		Moved to Pennsylvania with family in November 6th, 2008</h4>
+		</div><br>
+		<div>
+		<h4><i class="fa fa-mortar-board"></i>		Major: Mechanical Engineering</h4>
+		</div>
+		<br>
+		<div>
+		<h4><i class="fa fa-gamepad"></i>		Hobbies: Programming, Anime, Kpop</h4>
+		</div>
+    </div>
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <img src="cindy2.jpg" width="90%" class="w3-border w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me">
+    </div>
+
+  </div>
+<br>
+<div class="w3-row w3-center w3-dark-grey w3-padding-24">  
+</div>
+<br>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <h1 class="w3-center">Programming Projects</h1><br>
+  <!-- Three columns on tablets, laptops and desktops. Will stack on mobile devices/small screens -->
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m4 w3-animate-zoom project">
+	  <a href="#lock">
+      <img src="lock.png" style="width:70%" class="w3-hover-opacity" alt="LOCK">
+		</a>
+	  <h4><strong>Abracadabra</strong></h4>
+	  <h5>A basic android app that connects to a Raspberry Pi box by Bluetooth to unlock and change its settings.</h5>
+    </div>
+
+	<div class="w3-col m4 w3-animate-zoom">
+		<a href="#bearHugs">
+		<img src="bearIcon.png" style="width:70%" class="w3-hover-opacity">
+		</a>
+		<h4><strong>BearHugs</strong></h4>
+		<h5>A simple android app that can send warm messages and virtual bear hugs to your love ones. </h5>
+    </div>
+
+    <div class="w3-col m4 w3-animate-zoom">
+		<a href="#theDefenders">
+		<img src="theDefenders.png" style="width:70%"  class="w3-hover-opacity" alt="The Defenders">
+		</a>
+		<h4><strong>The Defenders</strong></h4>
+		<h5>A children's game that challenges gender role/stereotypes and sends positive message of stand up to bullying.</h5>
+    </div>
+
+   </div>
+	
+	<!--LOCK-->
+	<div id="lock" name="lock" class="w3-container w3-content w3-display-container w3-center">
+		<div class="w3-row w3-center w3-dark-grey">
+			<h2>
+			<strong>Abracadabra</strong>	
+			</h2>
+		</div>
+		<div><h4><strong>Presentation</strong></h4></div>
+		<div>
+		<img class="myLock" src="ppt1.jpg" style="width:100%">
+		<img class="myLock" src="ppt2.png" style="width:100%">
+		<img class="myLock" src="ppt3.png" style="width:100%">
+		<img class="myLock" src="ppt4.png" style="width:100%">
+		<img class="myLock" src="ppt5.png" style="width:100%">
+		<img class="myLock" src="ppt6.png" style="width:100%">
+
+		<button class="w3-button w3-black w3-display-left" onclick="addPage(-1)">&#10094;</button>
+		<button class="w3-button w3-black w3-display-right" onclick="addPage(1)">&#10095;</button>
+		</div>
+	</div>
+	<br>
+	
+	<!--BearHugs-->
+	<div id="bearHugs" name="bearHugs" class="w3-container w3-content w3-display-container w3-center">
+		<div class="w3-row w3-center w3-dark-grey">
+			<h2>
+			<strong>BearHugs</strong>	
+			</h2>
+		</div>
+		<br>
+		<div class="w3-row">
+		<div class="w3-col m6">
+		<button class="w3-button w3-grey w3-round-large" onClick=showPage('1')><strong>Demo Video </strong></button>
+		</div>
+		<div class="w3-col m6">
+		<button class="w3-button w3-grey w3-round-large" onClick=showPage('2')><strong>Award</strong></button>
+		</div>
+		</div>
+		<div id="page1">
+		<h4><strong>Demo Video</strong></h4>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/djnn6tN0sCA?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+		</div>
+		
+		<div id="page2" style="display: none;">
+		<h4><strong>Award</strong></h4>
+		<img src="bestApplication.jpg" width="480px">
+		<img src="codeDay.jpg" width="480px">
+		<h5>2017 CodeDay Pittsburgh <em>Best Application</em></h5>
+		</div>
+	</div>
+	<br>
+	
+	
+
+	<!--The Defenders-->
+	<div id="theDefenders" name="theDefenders"class="w3-container w3-content w3-display-container w3-center">
+		<div class="w3-row w3-center w3-dark-grey">
+			<h2>
+			<strong>The Defenders</strong>	
+			</h2>
+		</div>
+		<div class="defenders">
+		<h4><strong>Video Presentation</strong></h4>
+		<iframe width="480" height="320" src="https://www.youtube.com/embed/U-kmQS4f3SQ?rel=0" 
+	frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+		</div>
+		
+		<div class="defenders">
+		<h4><strong>Game Demo</strong></h4>
+		<embed width="480px" height="320px" src="Defenders.swf">
+		<h5><strong>use keyboard to control actions</strong></h5>
+		</div>
+		
+		<div class="defenders">
+		<h4><strong>Awards and Recognitions</strong></h4>
+		<img src="sheInnovates.png" width="480px" height="320px">
+		<h5>2015 She Innovates Women's Hackathon <em>1st Place</em> and <em>Most Creative Award</em> <br> 2015 Randall Family Big Idea Competition final round candidates</h5>
+		</div>
+		
+		
+		<button class="w3-button w3-grey w3-display-bottom-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-grey w3-display-bottom-right" onclick="plusDivs(1)">&#10095;</button>
+		<p><strong>Click the arrows to view next slide</strong></p>
+	</div>
+	
+	
+
+
+</div>
+<br>
+<div class="w3-row w3-center w3-dark-grey w3-padding-24">  
+</div>
+<br>
+
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m6 w3-container">
+      <!-- Add Google Maps -->
+      <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:200px;"></div>
+    </div>
+    <div class="w3-col m6 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Pittsburgh, PA<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 718-483-6080<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: ydnic622@gmail.com<br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-opacity w3-hover-opacity-off">
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.linkedin.com/in/zs0606/" target="_blank"> <i class="fa fa-linkedin w3-hover-opacity"></i> </a>
+	<a href="https://github.com/zs0606" target="_blank"> <i class="fa fa-github w3-hover-opacity"></i> </a>
+  </div>
+  <p>Ackknowledgement: <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <p>&copy; 2017<script>new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());</script>, CINDY SONG.</p>
+</footer>
+ 
+<!-- Add Google Maps -->
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(40.4377683,-79.9800617);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+<!-- Slides-->
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("defenders");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+<!--BearHugs pages-->
+<script>
+function showPage(id) {
+	var numOfPages = 2;
+	var i;
+	for (i = 1; i <numOfPages; i++) {
+		if(document.getElementById('page'+i))
+			document.getElementById('page'+i).style.display='none';
+	}
+	if (document.getElementById('page'+id))
+		document.getElementById('page'+id).style.display='block';
+}
+</script>
+
+<!--Abracadabra SlideShows-->
+<script>
+var slideIndex = 1;
+showSlide(slideIndex);
+
+function addPage(n) {
+  showSlide(slideIndex += n);
+}
+
+function showSlide(n) {
+  var i;
+  var x = document.getElementsByClassName("myLock");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAj49-LBv2GmDFlu50f7TW9iDSp9NLXbao&callback=myMap"></script>
+
+
+</body>
+</html>
